@@ -1,5 +1,5 @@
 const userController = require("../controllers/user.controller");
-const userError = require("../middlewares/errors/user.error");
+const userError = require("../../errors/user.error");
 
 const router = require("express").Router();
 

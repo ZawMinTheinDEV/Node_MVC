@@ -1,12 +1,12 @@
 const itemController = require("../controllers/item.controller");
-const itemError = require("../middlewares/errors/item.error");
+const itemError = require("../../errors/item.error");
 
 const router = require("express").Router();
 
 router.get("/all", itemController.getAllItems);
 router.post("", itemController.addItem);
 router.put("", itemController.updateItem);
-router.delete("",itemController.deleteItem);
+router.delete("", itemController.deleteItem);
 
 router.use(itemError.errorHandler);
 

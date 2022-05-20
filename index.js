@@ -2,10 +2,6 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const express = require("express");
 
-const { authenticate } = require("./src/middlewares/authenticate.middleware");
-const { authorize } = require("./src/middlewares/authorize.middleware");
-const tokenError = require("./src/middlewares/errors/token.error");
-
 const noAuth = require("./src/routes/noAuth.route");
 const itemRoute = require("./src/routes/item.route");
 const customerRoute = require("./src/routes/customer.route");
@@ -25,11 +21,6 @@ mongoose.connect("mongodb://localhost:27017/kyaw-pos", () =>
 
 //no auth route
 app.use("/api", noAuth);
-
-//auth middlewares
-// app.use(authenticate);
-// app.use(authorize);
-// app.use(tokenError.errorHandler);
 
 app.use("/api/item", itemRoute);
 app.use("/api/customer", customerRoute);

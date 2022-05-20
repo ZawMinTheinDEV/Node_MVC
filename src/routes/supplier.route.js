@@ -1,5 +1,5 @@
 const supplierController = require("../controllers/supplier.controller");
-const SupplierError = require("../middlewares/errors/Supplier.error.js");
+const SupplierError = require("../../errors/Supplier.error.js");
 
 const router = require("express").Router();
 

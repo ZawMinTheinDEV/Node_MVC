@@ -1,5 +1,5 @@
 const customerController = require("../controllers/customer.controller");
-const customerError = require("../middlewares/errors/customer.error");
+const customerError = require("../../errors/customer.error");
 
 const router = require("express").Router();
 
